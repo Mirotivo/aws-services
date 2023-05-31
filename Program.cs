@@ -16,6 +16,7 @@ namespace Services
             // Create CloudWatchLogger instance and append lines
             var logger = CloudWatchLogger.Instance;
             await logger.AppendLine("Log message to CloudWatch");
+            Console.WriteLine("Lines appended to CloudWatch events.");
 
             // Wait for key press to keep the console open
             Console.ReadKey();
