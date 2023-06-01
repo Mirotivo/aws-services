@@ -14,3 +14,7 @@ dotnet add package AWSSDK.S3
 ```
 dotnet add package AWSSDK.CloudWatchLogs
 ```
+## Application Integration
+```
+dotnet add package AWSSDK.SQS
+```

@@ -11,6 +11,7 @@
   <ItemGroup>
     <PackageReference Include="AWSSDK.CloudWatchLogs" Version="3.7.104.81" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.104.24" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.7.102.12" />
   </ItemGroup>
 
 </Project>
