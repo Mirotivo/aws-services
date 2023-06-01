@@ -15,6 +15,7 @@ namespace Services
 
             // Create CloudWatchLogger instance and append lines
             var logger = CloudWatchLogger.Instance;
+            await logger.AppendLine("First Line");
             await logger.AppendLine("Log message to CloudWatch");
             Console.WriteLine("Lines appended to CloudWatch events.");
 
