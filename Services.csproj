@@ -9,7 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.Core" Version="2.1.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.3.1" />
     <PackageReference Include="AWSSDK.CloudWatchLogs" Version="3.7.104.81" />
+    <PackageReference Include="AWSSDK.Lambda" Version="3.7.111.4" />
     <PackageReference Include="AWSSDK.S3" Version="3.7.104.24" />
     <PackageReference Include="AWSSDK.SQS" Version="3.7.102.12" />
   </ItemGroup>

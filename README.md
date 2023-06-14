@@ -5,6 +5,14 @@
 ```
 dotnet new console --name Services
 ```
+# Compute
+```
+dotnet add package Amazon.Lambda.Core
+dotnet add package Amazon.Lambda.Serialization.SystemTextJson
+```
+```
+dotnet add package AWSSDK.Lambda
+```
 
 ## Storage
 ```
