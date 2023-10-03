@@ -26,3 +26,7 @@ dotnet add package AWSSDK.CloudWatchLogs
 ```
 dotnet add package AWSSDK.SQS
 ```
+## Business Applications
+```
+dotnet add package AWSSDK.SimpleEmail
+```

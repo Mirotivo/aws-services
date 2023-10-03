@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Amazon;
 using Amazon.SQS.Model;
 
 namespace Services
@@ -37,21 +38,30 @@ namespace Services
             // }
             // Console.WriteLine(" queue processed successfully..");
 
-
-            var lambdaInvoker = new LambdaInvoker();
-            // Create the request payload
-            // var payload = "\"hello\"";
+            // var lambdaInvoker = new LambdaInvoker();
+            // // Create the request payload
+            // // var payload = "\"hello\"";
+            // // var lambdaFunctionName = "Test";
+            // var payload = "{ \"operation\": \"add\", \"num1\": 5, \"num2\": 3 }";
             // var lambdaFunctionName = "Test";
-            var payload = "{ \"operation\": \"add\", \"num1\": 5, \"num2\": 3 }";
-            var lambdaFunctionName = "Test";
-            // Invoke the Lambda function
-            var response = await lambdaInvoker.InvokeLambdaFunction(lambdaFunctionName, payload);
-            // Display the response
-            if (response != null)
-            {
-                Console.WriteLine("Lambda Response:");
-                Console.WriteLine(response);
-            }
+            // // Invoke the Lambda function
+            // var response = await lambdaInvoker.InvokeLambdaFunction(lambdaFunctionName, payload);
+            // // Display the response
+            // if (response != null)
+            // {
+            //     Console.WriteLine("Lambda Response:");
+            //     Console.WriteLine(response);
+            // }
+
+
+            var emailSender = new SES();
+            await emailSender.SendEmailAsync(
+                sender: "source@email.com",
+                recipient: "destination@email.com",
+                subject: "Welcome",
+                htmlBody: "Hello World",
+                textBody: "Hello World"
+            );
 
             // Wait for key press to keep the console open
             Console.ReadKey();
