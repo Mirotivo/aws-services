@@ -53,15 +53,19 @@ namespace Services
             //     Console.WriteLine(response);
             // }
 
+            // var emailSender = new SES();
+            // await emailSender.SendEmailAsync(
+            //     sender: "source@email.com",
+            //     recipient: "destination@email.com",
+            //     subject: "Welcome",
+            //     htmlBody: "Hello World",
+            //     textBody: "Hello World"
+            // );
 
-            var emailSender = new SES();
-            await emailSender.SendEmailAsync(
-                sender: "source@email.com",
-                recipient: "destination@email.com",
-                subject: "Welcome",
-                htmlBody: "Hello World",
-                textBody: "Hello World"
-            );
+            var otpSender = new OTPSender();
+            string recipientPhoneNumber = "+61123456789";
+            string otpCode = "123456";
+            otpSender.SendOTP(recipientPhoneNumber, otpCode);
 
             // Wait for key press to keep the console open
             Console.ReadKey();
